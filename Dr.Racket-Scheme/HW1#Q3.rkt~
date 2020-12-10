@@ -1,0 +1,10 @@
+
+(define (list-number=?  alist otherlist)
+    (cond
+            ((null? alist) (null? otherlist))
+            ((null? otherlist) #f)
+            ((= (car alist) (car otherlist))
+                (list-number=? (cdr alist) (cdr otherlist)))
+            (else #f)           
+    )
+)
